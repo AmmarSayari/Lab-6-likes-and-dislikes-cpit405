@@ -1,0 +1,11 @@
+body{
+    max-width: 486px;
+    margin: auto;
+    text-align: center;
+}
+
+#like-btn , #dislike-btn{
+
+    padding: 0% 6%;
+    font-size: 54px;
+}
