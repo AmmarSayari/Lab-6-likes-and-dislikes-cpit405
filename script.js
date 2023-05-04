@@ -12,8 +12,7 @@ disLikeBtn.innerText = initDislikes;
 //cookies
 
 window.onload = function(){
-
-    if(document.cookie && document.cookie.indexOf("voted")){
+    if(document.cookie && document.cookie.indexOf("voted")>-1){
         disableButtons();
     }
 }
@@ -22,24 +21,26 @@ function doLike(){
     upCount++;
     likesBtn.innerText = upCount;
     disableLikeButtons();
-    setCookie();
+    
 }
 
 function doDislike(){
     downCount++;
     disLikeBtn.innerText = downCount;
     disableDisLikeButtons();
-    setCookie();
+    
 }
 
 function disableLikeButtons(){
     disLikeBtn.disabled = false;
     likesBtn.disabled = true;
+    setCookie();
 }
 
 function disableDisLikeButtons(){
     disLikeBtn.disabled = true;
     likesBtn.disabled = false;
+    setCookie();
 }
 
 function disableButtons(){
